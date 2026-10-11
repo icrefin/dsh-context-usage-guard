@@ -1,0 +1,158 @@
+name: Bug report
+description: Report a reproducible defect in dsh-context-usage-guard so it can be fixed
+title: "[Bug]: "
+labels:
+  - bug
+  - needs-triage
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for reporting a bug. Fill in every field — incomplete reports are hard to
+        act on. Redact secrets, tokens, private keys, internal hostnames, and personal
+        data. A footer screenshot is the most useful attachment there is, but crop it to
+        the figures: the composer band sits next to workspace and model names.
+
+        **Security vulnerability?** Stop and read SECURITY.md instead. Never open a
+        public issue for a vulnerability.
+
+  - type: checkboxes
+    id: preflight
+    attributes:
+      label: Preflight checklist
+      description: Confirm each item before submitting.
+      options:
+        - label: I searched existing issues and did not find a duplicate.
+          required: true
+        - label: I am running the latest release or a recent commit of main.
+          required: true
+        - label: This is not a security vulnerability (those go through SECURITY.md).
+          required: true
+
+  - type: input
+    id: version
+    attributes:
+      label: Version or commit
+      description: Release tag, version number, or commit SHA of dsh-context-usage-guard where the bug occurs.
+      placeholder: "v0.2.0 or 1a2b3c4"
+    validations:
+      required: true
+
+  - type: input
+    id: dsh
+    attributes:
+      label: dsh version
+      description: The DeepSeek Harness build you ran the plugin against, and how it was installed (Settings → Plugins, the plugin-manager tool, or a profile you booted yourself).
+      placeholder: "dsh 0.2.0-rc.2, installed from the packed tarball via Settings → Plugins"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: surface
+    attributes:
+      label: Which surface shows the wrong reading?
+      description: This plugin repairs two things in the composer footer, so naming the surface narrows it down immediately.
+      options:
+        - The ring's percentage in the composer footer (the meter)
+        - The ring's typography — its percentage is larger than the figures beside it
+        - The figures beside the ring (steps, tok/s, total tokens, cache hit)
+        - The meter's breakdown dialog
+        - The host log line (`held an empty usage sample …`)
+        - Something else (describe below)
+    validations:
+      required: true
+
+  - type: dropdown
+    id: retry
+    attributes:
+      label: Was a retry in flight?
+      description: The host half only acts on failed attempts that the retry executor then retries.
+      options:
+        - "Yes — the request failed and was retried"
+        - "No — the reading is wrong with no failure on screen"
+        - Not sure
+    validations:
+      required: true
+
+  - type: input
+    id: reading
+    attributes:
+      label: What did the meter read?
+      description: The percentage shown, and the context pressure you expected. The host half is about `0%` appearing where a real reading was.
+      placeholder: "showed 0% mid-retry; expected 6%"
+    validations:
+      required: false
+
+  - type: textarea
+    id: screenshot
+    attributes:
+      label: Screenshot of the meter line
+      description: Drag the image in here. Crop to the footer band — everything else on that line can be private.
+      placeholder: "Attach a PNG/JPEG of the composer footer band."
+    validations:
+      required: false
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      description: Exact, minimal steps. Number them. Include the command or the UI path.
+      placeholder: |
+        1. Run a session until the provider rate-limits a step
+        2. Watch the composer footer while the retry runs
+        3. Observe '...'
+      render: shell
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+      description: What you expected to happen.
+    validations:
+      required: true
+
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual behavior
+      description: What actually happened, including the full error text.
+    validations:
+      required: true
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: Logs or configuration
+      description: Paste raw output, not a screenshot of text, where possible. If `logHeldSamples` is on, include the held-sample lines; if you changed the row's config, include those two fields.
+      render: text
+    validations:
+      required: false
+
+  - type: dropdown
+    id: regression
+    attributes:
+      label: Did this work before?
+      options:
+        - "No — first time using this plugin"
+        - "Yes — it regressed in a later version"
+        - Not sure
+    validations:
+      required: true
+
+  - type: textarea
+    id: workaround
+    attributes:
+      label: Workaround
+      description: "Anything that makes the bug go away, even partly — for example setting `enabled: false` or removing the bundle."
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: conduct
+    attributes:
+      label: Code of Conduct
+      options:
+        - label: I agree to follow this project's Code of Conduct.
+          required: true
