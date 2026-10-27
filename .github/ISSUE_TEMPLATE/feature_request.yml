@@ -98,7 +98,7 @@ body:
     id: version
     attributes:
       label: Version you are running
-      placeholder: "v0.2.0 or main"
+      placeholder: "v0.2.1 or main"
     validations:
       required: false
 

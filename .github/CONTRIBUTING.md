@@ -89,7 +89,7 @@ signal that the rule should be deleted rather than kept.
 
 ## Verification
 
-Checked before a release, on Node 22 with pnpm 11.8.0 against dsh `0.2.0-rc.2`:
+Checked before a release, on Node 22 with pnpm 11.8.0 against dsh `0.2.1-rc.3`:
 
 - `pnpm check` — both halves typecheck, and 40 tests pass in the five suites above.
 - `pnpm build` — the bundles it rewrites satisfy the manifest: the `dsh.bundle.patch`
@@ -303,7 +303,7 @@ pnpm check          # 先 tsc 检查两侧，再跑 vitest
 
 ## 验证
 
-发布前会检查以下内容，环境为 Node 22 + pnpm 11.8.0，针对 dsh `0.2.0-rc.2`：
+发布前会检查以下内容，环境为 Node 22 + pnpm 11.8.0，针对 dsh `0.2.1-rc.3`：
 
 - `pnpm check` —— 两半都通过类型检查，且上表 5 个套件共 40 个测试全部通过。
 - `pnpm build` —— 它重写出的 bundle 满足 manifest：`dsh.bundle.patch` 行 id、包名与

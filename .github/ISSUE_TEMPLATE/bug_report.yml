@@ -34,7 +34,7 @@ body:
     attributes:
       label: Version or commit
       description: Release tag, version number, or commit SHA of dsh-context-usage-guard where the bug occurs.
-      placeholder: "v0.2.0 or 1a2b3c4"
+      placeholder: "v0.2.1 or 1a2b3c4"
     validations:
       required: true
 
@@ -43,7 +43,7 @@ body:
     attributes:
       label: dsh version
       description: The DeepSeek Harness build you ran the plugin against, and how it was installed (Settings → Plugins, the plugin-manager tool, or a profile you booted yourself).
-      placeholder: "dsh 0.2.0-rc.2, installed from the packed tarball via Settings → Plugins"
+      placeholder: "dsh 0.2.1-rc.3, installed from the packed tarball via Settings → Plugins"
     validations:
       required: true
 

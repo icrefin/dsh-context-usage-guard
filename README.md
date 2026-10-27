@@ -6,13 +6,13 @@ typeset at the size of the figures beside it.
 **English** | [简体中文](README.zh-CN.md)
 
 [![License](https://img.shields.io/github/license/icrefin/dsh-context-usage-guard?style=flat-square)](LICENSE)
-[![Release](https://img.shields.io/github/v/release/icrefin/dsh-context-usage-guard?style=flat-square)](https://github.com/icrefin/dsh-context-usage-guard/releases/tag/v0.2.0)
+[![Release](https://img.shields.io/github/v/release/icrefin/dsh-context-usage-guard?style=flat-square)](https://github.com/icrefin/dsh-context-usage-guard/releases/tag/v0.2.1)
 [![CI](https://img.shields.io/github/actions/workflow/status/icrefin/dsh-context-usage-guard/ci.yml?branch=main&style=flat-square)](https://github.com/icrefin/dsh-context-usage-guard/actions/workflows/ci.yml)
 [![Last commit](https://img.shields.io/github/last-commit/icrefin/dsh-context-usage-guard?style=flat-square)](https://github.com/icrefin/dsh-context-usage-guard/commits/main)
 [![Stars](https://img.shields.io/github/stars/icrefin/dsh-context-usage-guard?style=flat-square)](https://github.com/icrefin/dsh-context-usage-guard/stargazers)
 [![PRs welcome](https://img.shields.io/badge/PRs-welcome-brightgreen?style=flat-square)](https://github.com/icrefin/dsh-context-usage-guard/pulls)
 [![Node](https://img.shields.io/badge/node-%3E%3D22.17-339933?style=flat-square&logo=node.js)](https://nodejs.org)
-[![dsh](https://img.shields.io/badge/dsh-0.2.0--rc.2-4B5563?style=flat-square)](https://github.com/deepseek-ai/deepseek-harness)
+[![dsh](https://img.shields.io/badge/dsh-0.2.1--rc.3-4B5563?style=flat-square)](https://github.com/deepseek-ai/deepseek-harness)
 
 A [DeepSeek Harness](https://github.com/deepseek-ai/deepseek-harness) (dsh)
 plugin that repairs two defects in the composer's **context-usage ring** — one in
@@ -89,7 +89,7 @@ shipped stylesheets disagree by one pixel about how big a figure is:
 ```
 
 Both prefixes are content-hashed per build — the pair above is what the
-`0.2.0-rc.2` packages installed here carry; the *declarations* are what matters,
+`0.2.1-rc.3` packages installed here carry; the *declarations* are what matters,
 and `test/meter-typography.spec.ts` re-reads them from the installed packages
 rather than trusting this block.
 
@@ -182,7 +182,7 @@ reads a session log, a profile or the network.
 
 | Requirement | Version | Notes |
 |---|---|---|
-| DeepSeek Harness | `0.2.0-rc.2` | the `dsh` version this build is pinned to; peers are `@deepseek-ai/cordis` ^4.0.1, `@deepseek-ai/dsh-llm` 0.2.0-rc.2 and `@deepseek-ai/schemastery` ^3.18.3 |
+| DeepSeek Harness | `0.2.1-rc.3` | the `dsh` version this build is pinned to; peers are `@deepseek-ai/cordis` ^4.0.5, `@deepseek-ai/dsh-llm` 0.2.1-rc.3 and `@deepseek-ai/schemastery` ^3.18.5 |
 | Node.js | `>=22.17.0` | `engines.node` in `package.json` |
 | pnpm | `11.8.0` | only for developing this repository: `pnpm check` and `pnpm build` |
 | Google Chrome, Chromium or Edge | any recent | only for `tools/preview.mjs`, the screenshot harness |
@@ -198,7 +198,7 @@ cd dsh-context-usage-guard
 sh scripts/install.sh
 ```
 
-`scripts/install.sh` packs `dist/dsh-context-usage-guard-0.2.0.tgz` and prints the
+`scripts/install.sh` packs `dist/dsh-context-usage-guard-0.2.1.tgz` and prints the
 path to give the app. The desktop profile is owned by the Electron application,
 so `dsh plugin add` refuses it: install the tarball from **Settings → Plugins**
 (or with the plugin-manager tool), then **restart**. A bundle added to a running
@@ -323,4 +323,4 @@ MIT — see [LICENSE](LICENSE).
 
 ---
 
-Built for DeepSeek Harness `0.2.0-rc.2` · MIT · [issues and pull requests](https://github.com/icrefin/dsh-context-usage-guard/issues) are welcome.
+Built for DeepSeek Harness `0.2.1-rc.3` · MIT · [issues and pull requests](https://github.com/icrefin/dsh-context-usage-guard/issues) are welcome.
