@@ -28,7 +28,7 @@ before you write the implementation.
 ## Development setup
 
 This is a TypeScript package built with pnpm. It needs **Node >= 22.17.0** and
-**pnpm 11.8.0**. The `@deepseek-ai/dsh-*` peer dependencies are resolved from the
+**pnpm 11.20.0**. The `@deepseek-ai/dsh-*` peer dependencies are resolved from the
 registry, so a clean checkout really does install.
 
 ```bash
@@ -89,7 +89,7 @@ signal that the rule should be deleted rather than kept.
 
 ## Verification
 
-Checked before a release, on Node 22 with pnpm 11.8.0 against dsh `0.2.1-rc.3`:
+Checked before a release, on Node 22 with pnpm 11.20.0 against dsh `0.2.1-rc.5`:
 
 - `pnpm check` — both halves typecheck, and 40 tests pass in the five suites above.
 - `pnpm build` — the bundles it rewrites satisfy the manifest: the `dsh.bundle.patch`
@@ -246,7 +246,7 @@ usage 样本，浏览器侧只加一条样式规则，把 meter 的百分比设�
 ## 开发环境
 
 本项目是用 pnpm 构建的 TypeScript 包，需要 **Node >= 22.17.0** 与
-**pnpm 11.8.0**。`@deepseek-ai/dsh-*` 这些 peer 依赖从 registry 解析，因此在干净的
+**pnpm 11.20.0**。`@deepseek-ai/dsh-*` 这些 peer 依赖从 registry 解析，因此在干净的
 检出上可以直接安装。
 
 ```bash
@@ -303,7 +303,7 @@ pnpm check          # 先 tsc 检查两侧，再跑 vitest
 
 ## 验证
 
-发布前会检查以下内容，环境为 Node 22 + pnpm 11.8.0，针对 dsh `0.2.1-rc.3`：
+发布前会检查以下内容，环境为 Node 22 + pnpm 11.20.0，针对 dsh `0.2.1-rc.5`：
 
 - `pnpm check` —— 两半都通过类型检查，且上表 5 个套件共 40 个测试全部通过。
 - `pnpm build` —— 它重写出的 bundle 满足 manifest：`dsh.bundle.patch` 行 id、包名与

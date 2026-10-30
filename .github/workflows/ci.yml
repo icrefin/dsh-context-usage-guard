@@ -7,7 +7,7 @@
 # The peer dependencies (@deepseek-ai/*) are resolved from the registry, so a
 # clean checkout really does install, and the repository carries a lockfile, so
 # the install is frozen. `pnpm/action-setup` reads `packageManager` from
-# package.json (pnpm@11.8.0, written there by the publish pipeline), which is why
+# package.json (pnpm@11.20.0, written there by the publish pipeline), which is why
 # no version is repeated here.
 name: CI
 
@@ -39,7 +39,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      # Version comes from package.json "packageManager" (pnpm@11.8.0).
+      # Version comes from package.json "packageManager" (pnpm@11.20.0).
       - name: Set up pnpm
         uses: pnpm/action-setup@v4
 

@@ -5,13 +5,13 @@
 [English](README.md) | **简体中文**
 
 [![License](https://img.shields.io/github/license/icrefin/dsh-context-usage-guard?style=flat-square)](LICENSE)
-[![Release](https://img.shields.io/github/v/release/icrefin/dsh-context-usage-guard?style=flat-square)](https://github.com/icrefin/dsh-context-usage-guard/releases/tag/v0.2.1)
+[![Release](https://img.shields.io/github/v/release/icrefin/dsh-context-usage-guard?style=flat-square)](https://github.com/icrefin/dsh-context-usage-guard/releases/tag/v0.2.2)
 [![CI](https://img.shields.io/github/actions/workflow/status/icrefin/dsh-context-usage-guard/ci.yml?branch=main&style=flat-square)](https://github.com/icrefin/dsh-context-usage-guard/actions/workflows/ci.yml)
 [![Last commit](https://img.shields.io/github/last-commit/icrefin/dsh-context-usage-guard?style=flat-square)](https://github.com/icrefin/dsh-context-usage-guard/commits/main)
 [![Stars](https://img.shields.io/github/stars/icrefin/dsh-context-usage-guard?style=flat-square)](https://github.com/icrefin/dsh-context-usage-guard/stargazers)
 [![PRs welcome](https://img.shields.io/badge/PRs-welcome-brightgreen?style=flat-square)](https://github.com/icrefin/dsh-context-usage-guard/pulls)
 [![Node](https://img.shields.io/badge/node-%3E%3D22.17-339933?style=flat-square&logo=node.js)](https://nodejs.org)
-[![dsh](https://img.shields.io/badge/dsh-0.2.1--rc.3-4B5563?style=flat-square)](https://github.com/deepseek-ai/deepseek-harness)
+[![dsh](https://img.shields.io/badge/dsh-0.2.1--rc.5-4B5563?style=flat-square)](https://github.com/deepseek-ai/deepseek-harness)
 
 一个 [DeepSeek Harness](https://github.com/deepseek-ai/deepseek-harness)（dsh）
 插件，修复 composer 里**上下文用量环**的两处缺陷——一处是它显示的数值，一处是
@@ -82,7 +82,7 @@ adapter 的累加器从 0 开始，而没有任何东西覆盖过它，所以这
 .JObwrW_trigger { font-size: var(--dsh-content-font-size-secondary,13px) }
 ```
 
-两个前缀都是按构建内容哈希出来的——上面这一对是这里安装到的 `0.2.1-rc.3` 包所带的；
+两个前缀都是按构建内容哈希出来的——上面这一对是这里安装到的 `0.2.1-rc.5` 包所带的；
 真正要紧的是那两条*声明*，`test/meter-typography.spec.ts` 会从已安装的包里重新读
 它们，而不是相信这段引文。
 
@@ -162,9 +162,9 @@ button[aria-haspopup="dialog"]:has(> svg > circle) {
 
 | 要求 | 版本 | 说明 |
 |---|---|---|
-| DeepSeek Harness | `0.2.1-rc.3` | 本构建钉住的 `dsh` 版本；peer 依赖为 `@deepseek-ai/cordis` ^4.0.5、`@deepseek-ai/dsh-llm` 0.2.1-rc.3、`@deepseek-ai/schemastery` ^3.18.5 |
+| DeepSeek Harness | `>=0.2.1-rc.5 <0.2.2-0` | 本构建钉住的 `dsh` 区间（已在 0.2.1-rc.5 上验证）；peer 依赖为 `@deepseek-ai/cordis` ^4.0.5、`@deepseek-ai/dsh-llm` 0.2.1-rc.5、`@deepseek-ai/schemastery` ^3.18.5 |
 | Node.js | `>=22.17.0` | `package.json` 里的 `engines.node` |
-| pnpm | `11.8.0` | 仅用于开发这个仓库：`pnpm check` 与 `pnpm build` |
+| pnpm | `11.20.0` | 仅用于开发这个仓库：`pnpm check` 与 `pnpm build` |
 | Google Chrome、Chromium 或 Edge | 任意较新版本 | 仅用于截图工具 `tools/preview.mjs` |
 
 构建产物已在 `lib/` 中提交，所以安装这个插件不需要构建步骤，也不需要目标 harness
@@ -285,4 +285,4 @@ MIT —— 见 [LICENSE](LICENSE)。
 
 ---
 
-为 DeepSeek Harness `0.2.1-rc.3` 构建 · MIT · 欢迎提交 [issue 与 pull request](https://github.com/icrefin/dsh-context-usage-guard/issues)。
+为 DeepSeek Harness `0.2.1-rc.5` 构建 · MIT · 欢迎提交 [issue 与 pull request](https://github.com/icrefin/dsh-context-usage-guard/issues)。

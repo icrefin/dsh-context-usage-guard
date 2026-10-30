@@ -6,13 +6,13 @@ typeset at the size of the figures beside it.
 **English** | [简体中文](README.zh-CN.md)
 
 [![License](https://img.shields.io/github/license/icrefin/dsh-context-usage-guard?style=flat-square)](LICENSE)
-[![Release](https://img.shields.io/github/v/release/icrefin/dsh-context-usage-guard?style=flat-square)](https://github.com/icrefin/dsh-context-usage-guard/releases/tag/v0.2.1)
+[![Release](https://img.shields.io/github/v/release/icrefin/dsh-context-usage-guard?style=flat-square)](https://github.com/icrefin/dsh-context-usage-guard/releases/tag/v0.2.2)
 [![CI](https://img.shields.io/github/actions/workflow/status/icrefin/dsh-context-usage-guard/ci.yml?branch=main&style=flat-square)](https://github.com/icrefin/dsh-context-usage-guard/actions/workflows/ci.yml)
 [![Last commit](https://img.shields.io/github/last-commit/icrefin/dsh-context-usage-guard?style=flat-square)](https://github.com/icrefin/dsh-context-usage-guard/commits/main)
 [![Stars](https://img.shields.io/github/stars/icrefin/dsh-context-usage-guard?style=flat-square)](https://github.com/icrefin/dsh-context-usage-guard/stargazers)
 [![PRs welcome](https://img.shields.io/badge/PRs-welcome-brightgreen?style=flat-square)](https://github.com/icrefin/dsh-context-usage-guard/pulls)
 [![Node](https://img.shields.io/badge/node-%3E%3D22.17-339933?style=flat-square&logo=node.js)](https://nodejs.org)
-[![dsh](https://img.shields.io/badge/dsh-0.2.1--rc.3-4B5563?style=flat-square)](https://github.com/deepseek-ai/deepseek-harness)
+[![dsh](https://img.shields.io/badge/dsh-0.2.1--rc.5-4B5563?style=flat-square)](https://github.com/deepseek-ai/deepseek-harness)
 
 A [DeepSeek Harness](https://github.com/deepseek-ai/deepseek-harness) (dsh)
 plugin that repairs two defects in the composer's **context-usage ring** — one in
@@ -82,14 +82,14 @@ shipped stylesheets disagree by one pixel about how big a figure is:
 
 ```css
 /* @deepseek-ai/dsh-client-ui-chat — StatsPills.module.css, the pills */
-.bOPqQW_root    { font-size: calc(var(--dsh-content-font-size-secondary,13px) - 1px) }
+.Q51KRG_trigger { font-size: calc(var(--dsh-content-font-size-secondary,13px) - 1px) }
 
 /* @deepseek-ai/dsh-client-ui-conversation — ContextMeter.module.css, the ring */
 .JObwrW_trigger { font-size: var(--dsh-content-font-size-secondary,13px) }
 ```
 
 Both prefixes are content-hashed per build — the pair above is what the
-`0.2.1-rc.3` packages installed here carry; the *declarations* are what matters,
+`0.2.1-rc.5` packages installed here carry; the *declarations* are what matters,
 and `test/meter-typography.spec.ts` re-reads them from the installed packages
 rather than trusting this block.
 
@@ -182,9 +182,9 @@ reads a session log, a profile or the network.
 
 | Requirement | Version | Notes |
 |---|---|---|
-| DeepSeek Harness | `0.2.1-rc.3` | the `dsh` version this build is pinned to; peers are `@deepseek-ai/cordis` ^4.0.5, `@deepseek-ai/dsh-llm` 0.2.1-rc.3 and `@deepseek-ai/schemastery` ^3.18.5 |
+| DeepSeek Harness | `>=0.2.1-rc.5 <0.2.2-0` | the `dsh` range this build is pinned to (verified on 0.2.1-rc.5); peers are `@deepseek-ai/cordis` ^4.0.5, `@deepseek-ai/dsh-llm` 0.2.1-rc.5 and `@deepseek-ai/schemastery` ^3.18.5 |
 | Node.js | `>=22.17.0` | `engines.node` in `package.json` |
-| pnpm | `11.8.0` | only for developing this repository: `pnpm check` and `pnpm build` |
+| pnpm | `11.20.0` | only for developing this repository: `pnpm check` and `pnpm build` |
 | Google Chrome, Chromium or Edge | any recent | only for `tools/preview.mjs`, the screenshot harness |
 
 The built halves are committed in `lib/`, so installing the plugin needs no build
@@ -323,4 +323,4 @@ MIT — see [LICENSE](LICENSE).
 
 ---
 
-Built for DeepSeek Harness `0.2.1-rc.3` · MIT · [issues and pull requests](https://github.com/icrefin/dsh-context-usage-guard/issues) are welcome.
+Built for DeepSeek Harness `0.2.1-rc.5` · MIT · [issues and pull requests](https://github.com/icrefin/dsh-context-usage-guard/issues) are welcome.
