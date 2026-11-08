@@ -27,7 +27,7 @@ before you write the implementation.
 
 ## Development setup
 
-This is a TypeScript package built with pnpm. It needs **Node >= 22.17.0** and
+This is a TypeScript package built with pnpm. It needs **Node >= 24.9.0** and
 **pnpm 11.20.0**. The `@deepseek-ai/dsh-*` peer dependencies are resolved from the
 registry, so a clean checkout really does install.
 
@@ -89,7 +89,7 @@ signal that the rule should be deleted rather than kept.
 
 ## Verification
 
-Checked before a release, on Node 22 with pnpm 11.20.0 against dsh `0.2.1-rc.5`:
+Checked before a release, on Node 24 with pnpm 11.20.0 against dsh `0.2.2-rc.1`:
 
 - `pnpm check` — both halves typecheck, and 40 tests pass in the five suites above.
 - `pnpm build` — the bundles it rewrites satisfy the manifest: the `dsh.bundle.patch`
@@ -151,7 +151,7 @@ Every pull request must:
 
 - Explain **what** changed and **why**.
 - Link the issue it closes (`Closes #123`).
-- Pass CI (`pnpm typecheck` and `pnpm test`, on Node 22 with pnpm).
+- Pass CI (`pnpm typecheck` and `pnpm test`, on Node 24 with pnpm).
 - Rebuild `lib/` and commit it when either half changes.
 - Update documentation whenever user-facing behavior changes — including both
   the English and the Chinese READMEs.
@@ -245,7 +245,7 @@ usage 样本，浏览器侧只加一条样式规则，把 meter 的百分比设�
 
 ## 开发环境
 
-本项目是用 pnpm 构建的 TypeScript 包，需要 **Node >= 22.17.0** 与
+本项目是用 pnpm 构建的 TypeScript 包，需要 **Node >= 24.9.0** 与
 **pnpm 11.20.0**。`@deepseek-ai/dsh-*` 这些 peer 依赖从 registry 解析，因此在干净的
 检出上可以直接安装。
 
@@ -303,7 +303,7 @@ pnpm check          # 先 tsc 检查两侧，再跑 vitest
 
 ## 验证
 
-发布前会检查以下内容，环境为 Node 22 + pnpm 11.20.0，针对 dsh `0.2.1-rc.5`：
+发布前会检查以下内容，环境为 Node 24 + pnpm 11.20.0，针对 dsh `0.2.2-rc.1`：
 
 - `pnpm check` —— 两半都通过类型检查，且上表 5 个套件共 40 个测试全部通过。
 - `pnpm build` —— 它重写出的 bundle 满足 manifest：`dsh.bundle.patch` 行 id、包名与
@@ -359,7 +359,7 @@ node tools/preview.mjs --png docs/images/context-usage-ring.png
 
 - 说明改了**什么**、**为什么**改。
 - 关联对应 issue（`Closes #123`）。
-- 通过 CI（Node 22 + pnpm 上跑 `pnpm typecheck` 与 `pnpm test`）。
+- 通过 CI（Node 24 + pnpm 上跑 `pnpm typecheck` 与 `pnpm test`）。
 - 当两半之一有改动时，重新构建 `lib/` 并提交。
 - 当用户可见行为变化时更新文档，包括英文与中文两份 README。
 - 不含任何密钥、令牌、私钥、内网主机名或个人数据。欢迎附 meter 那一行的截图，
