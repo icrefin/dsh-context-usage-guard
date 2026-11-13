@@ -5,13 +5,13 @@
 [English](README.md) | **简体中文**
 
 [![License](https://img.shields.io/github/license/icrefin/dsh-context-usage-guard?style=flat-square)](LICENSE)
-[![Release](https://img.shields.io/github/v/release/icrefin/dsh-context-usage-guard?style=flat-square)](https://github.com/icrefin/dsh-context-usage-guard/releases/tag/v0.2.3)
+[![Release](https://img.shields.io/github/v/release/icrefin/dsh-context-usage-guard?style=flat-square)](https://github.com/icrefin/dsh-context-usage-guard/releases/tag/v0.2.4)
 [![CI](https://img.shields.io/github/actions/workflow/status/icrefin/dsh-context-usage-guard/ci.yml?branch=main&style=flat-square)](https://github.com/icrefin/dsh-context-usage-guard/actions/workflows/ci.yml)
 [![Last commit](https://img.shields.io/github/last-commit/icrefin/dsh-context-usage-guard?style=flat-square)](https://github.com/icrefin/dsh-context-usage-guard/commits/main)
 [![Stars](https://img.shields.io/github/stars/icrefin/dsh-context-usage-guard?style=flat-square)](https://github.com/icrefin/dsh-context-usage-guard/stargazers)
 [![PRs welcome](https://img.shields.io/badge/PRs-welcome-brightgreen?style=flat-square)](https://github.com/icrefin/dsh-context-usage-guard/pulls)
 [![Node](https://img.shields.io/badge/node-%3E%3D24.9-339933?style=flat-square&logo=node.js)](https://nodejs.org)
-[![dsh](https://img.shields.io/badge/dsh-0.2.2--rc.1-4B5563?style=flat-square)](https://github.com/deepseek-ai/deepseek-harness)
+[![dsh](https://img.shields.io/badge/dsh-0.2.2--rc.2-4B5563?style=flat-square)](https://github.com/deepseek-ai/deepseek-harness)
 
 一个 [DeepSeek Harness](https://github.com/deepseek-ai/deepseek-harness)（dsh）
 插件，修复 composer 里**上下文用量环**的两处缺陷——一处是它显示的数值，一处是
@@ -82,7 +82,7 @@ adapter 的累加器从 0 开始，而没有任何东西覆盖过它，所以这
 .JObwrW_trigger { font-size: var(--dsh-content-font-size-secondary,13px) }
 ```
 
-两个前缀都是按构建内容哈希出来的——上面这一对是这里安装到的 `0.2.2-rc.1` 包所带的；
+两个前缀都是按构建内容哈希出来的——上面这一对是这里安装到的 `0.2.2-rc.2` 包所带的；
 真正要紧的是那两条*声明*，`test/meter-typography.spec.ts` 会从已安装的包里重新读
 它们，而不是相信这段引文。
 
@@ -162,7 +162,7 @@ button[aria-haspopup="dialog"]:has(> svg > circle) {
 
 | 要求 | 版本 | 说明 |
 |---|---|---|
-| DeepSeek Harness | `>=0.2.2-rc.1 <0.2.3-0` | 本构建钉住的 `dsh` 区间（已在 0.2.2-rc.1 上验证）；peer 依赖为 `@deepseek-ai/cordis` ~4.1.0、`@deepseek-ai/dsh-llm` 0.2.2-rc.1、`@deepseek-ai/schemastery` ~3.19.0 |
+| DeepSeek Harness | `>=0.2.2-rc.2 <0.2.3-0` | 本构建钉住的 `dsh` 区间（已在 0.2.2-rc.2 上验证）；peer 依赖为 `@deepseek-ai/cordis` ~4.1.0、`@deepseek-ai/dsh-llm` 0.2.2-rc.2、`@deepseek-ai/schemastery` ~3.19.0 |
 | Node.js | `>=24.9.0` | `package.json` 里的 `engines.node` |
 | pnpm | `11.20.0` | 仅用于开发这个仓库：`pnpm check` 与 `pnpm build` |
 | Google Chrome、Chromium 或 Edge | 任意较新版本 | 仅用于截图工具 `tools/preview.mjs` |
@@ -178,7 +178,7 @@ cd dsh-context-usage-guard
 sh scripts/install.sh
 ```
 
-`scripts/install.sh` 会打出 `dist/dsh-context-usage-guard-0.2.3.tgz`，并打印要交给
+`scripts/install.sh` 会打出 `dist/dsh-context-usage-guard-0.2.4.tgz`，并打印要交给
 应用的路径。桌面 profile 归 Electron 应用所有，所以 `dsh plugin add` 会拒绝它：
 请在 **Settings → Plugins** 里安装这个 tarball（或者用插件管理器工具），然后
 **重启**。装进一个正在运行的 profile 的 bundle，那个进程 import 不了——它的模块
@@ -285,4 +285,4 @@ MIT —— 见 [LICENSE](LICENSE)。
 
 ---
 
-为 DeepSeek Harness `0.2.2-rc.1` 构建 · MIT · 欢迎提交 [issue 与 pull request](https://github.com/icrefin/dsh-context-usage-guard/issues)。
+为 DeepSeek Harness `0.2.2-rc.2` 构建 · MIT · 欢迎提交 [issue 与 pull request](https://github.com/icrefin/dsh-context-usage-guard/issues)。
